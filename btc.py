@@ -5,8 +5,13 @@ from datetime import datetime
 def trackBitcoin():
     url = "https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD,JPY,EUR"
     response = requests.get(url).json()
-    print(response)
+    price = response["USD"]
+    time = datetime.now().strftime("%H:%M:%S")
 
+    labelPrice.config(text = str(price) + "$")
+    labelTime.config(text = "Updated at: " + time)
+
+    canvas.after(1000, trackBitcoin) #refreshes the price every 10 milliseconds
 
 canvas = tk.Tk()
 canvas.geometry("500x500")
