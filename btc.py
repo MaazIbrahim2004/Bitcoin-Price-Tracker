@@ -11,7 +11,7 @@ def trackBitcoin():
     labelPrice.config(text = str(price) + "$")
     labelTime.config(text = "Updated at: " + time)
 
-    canvas.after(1000, trackBitcoin) #refreshes the price every 10 milliseconds
+    canvas.after(1000, trackBitcoin) #refreshes the price every 1000 milliseconds
 
 canvas = tk.Tk()
 canvas.geometry("500x500")
