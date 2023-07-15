@@ -10,12 +10,15 @@ def track_bitcoin():
     price_usd = response["USD"]
     price_jpy = response["JPY"]
     price_eur = response["EUR"]
-    time = datetime.now().strftime("%I:%M:%S %p")  # time that the price was last updated
+    now = datetime.now()  # current date and time
+    date = now.strftime("%Y-%m-%d")  # date in format YYYY-MM-DD
+    time = now.strftime("%I:%M:%S %p")  # time in 12 hour format
 
     labelPriceUSD.config(text="USD: " + str(price_usd) + "$")
     labelPriceJPY.config(text="JPY: " + str(price_jpy) + "¥")
     labelPriceEUR.config(text="EUR: " + str(price_eur) + "€")
     labelTime.config(text="Updated at: " + time)
+    labelDate.config(text="Date: " + date)
 
     canvas.after(1000, track_bitcoin)  # refreshes the price every 1 second
 
@@ -42,6 +45,9 @@ labelPriceEUR.pack(pady=20)
 
 labelTime = tk.Label(canvas, font=f3)
 labelTime.pack(pady=20)
+
+labelDate = tk.Label(canvas, font=f3)  # label for current date
+labelDate.pack(pady=20)
 
 track_bitcoin()
 
