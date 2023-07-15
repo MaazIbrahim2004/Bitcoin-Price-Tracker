@@ -17,7 +17,7 @@ def track_bitcoin():
     labelPriceEUR.config(text="EUR: " + str(price_eur) + "€")
     labelTime.config(text="Updated at: " + time)
 
-    canvas.after(1000, track_bitcoin)  # refreshes the price every 1000 milliseconds
+    canvas.after(1000, track_bitcoin)  # refreshes the price every 1 second
 
 
 canvas = tk.Tk()
@@ -40,7 +40,7 @@ labelPriceJPY.pack(pady=20)
 labelPriceEUR = tk.Label(canvas, font=f2)
 labelPriceEUR.pack(pady=20)
 
-labelTime = tk.Label(canvas, font=f3)  
+labelTime = tk.Label(canvas, font=f3)
 labelTime.pack(pady=20)
 
 track_bitcoin()
