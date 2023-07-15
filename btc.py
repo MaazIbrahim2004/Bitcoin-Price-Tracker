@@ -8,7 +8,7 @@ def trackBitcoin():
     price_usd = response["USD"]
     price_jpy = response["JPY"]
     price_eur = response["EUR"]
-    time = datetime.now().strftime("%H:%M:%S")
+    time = datetime.now().strftime("%I:%M:%S %p")  # Changed to 12-hour format with AM/PM
 
     labelPriceUSD.config(text = "USD: " + str(price_usd) + "$")
     labelPriceJPY.config(text = "JPY: " + str(price_jpy) + "¥")
