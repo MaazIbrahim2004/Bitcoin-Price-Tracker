@@ -2,7 +2,8 @@
 
 This is a simple Python application that uses the `tkinter` library for GUI and `requests` library to fetch real time Bitcoin prices in USD, JPY, and EUR. All the Bitcoin prices are fetched using the CryptoCompare API.
 
-![2023-07-15-13-52-01 (1)](https://github.com/MaazIbrahim2004/Bitcoin-Price-Tracker/assets/111203880/bfbe241a-c693-48d9-ab31-fa673965069a)
+![2023-07-15-13-52-01 (1)](https://github.com/MaazIbrahim2004/Bitcoin-Price-Tracker/assets/111203880/7a626a47-38d7-4d30-8629-548acac7eac2)
+
 
 ## Prerequisites
 * You have installed Python 3.6 or above.
